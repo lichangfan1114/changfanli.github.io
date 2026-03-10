@@ -3,25 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>李昌繁的个人主页</title>
+    <title>李昌繁 | 个人作品集</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 100px auto; padding: 20px; background: #fff; }
-        h1 { font-weight: 600; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        a { color: #000; text-decoration: none; border-bottom: 1px solid #ccc; }
-        footer { margin-top: 50px; font-size: 0.8em; color: #888; }
+        :root {
+            --bg-color: #f0f0f0;
+            --card-white: #ffffff;
+            --text-main: #222;
+        }
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            font-family: "Inter", -apple-system, sans-serif;
+            color: var(--text-main);
+        }
+        /* 页面容器 */
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* 每一页的样式 */
+        .page {
+            position: sticky;
+            top: 5vh; /* 每一页停留在距离顶部 5% 的位置 */
+            width: 85vw;
+            max-width: 600px;
+            height: 80vh;
+            background: var(--card-white);
+            margin-bottom: 10vh;
+            padding: 40px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+        }
+        /* 封面页特殊样式 */
+        .cover { background: #1a1a1a; color: white; }
+        
+        h2 { font-size: 1.8rem; border-bottom: 2px solid #333; padding-bottom: 10px; display: inline-block; }
+        .cover h2 { border-bottom-color: #fff; }
+
+        p { line-height: 1.8; color: #555; font-size: 1.1rem; }
+        .cover p { color: #ccc; }
+
+        .tag { font-family: monospace; font-size: 0.8rem; color: #888; margin-bottom: 10px; display: block; }
+        
+        /* 社交媒体链接样式 */
+        .social-links a {
+            display: block;
+            margin: 10px 0;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <h1>你好，我是李昌繁</h1>
-    <p>欢迎来到我的极简个人主页。</p>
-    <p>目前我正在探索网页开发与个人品牌建设。</p>
-    <section>
-        <h3>找到我</h3>
-        <ul>
-            <li>微信/电话: [填写你的信息]</li>
-            <li>邮箱: [填写你的邮箱]</li>
-        </ul>
-    </section>
-    <footer>© 2026 Changfan Li.</footer>
+
+    <div class="page-container">
+        <section class="page cover">
+            <span class="tag">01 / COVER</span>
+            <h1>李昌繁</h1>
+            <p>这是一本关于我的数字小册子。<br>向下滚动开始阅读 ➔</p>
+        </section>
+
+        <section class="page">
+            <span class="tag">02 / EXPERIENCE</span>
+            <h2>实习经历</h2>
+            <p><strong>某某科技有限公司</strong> · 产品实习生<br>2025.06 - 2025.09</p>
+            <p>• 参与了个人网站自动化生成的项目调研。<br>• 负责极简主义 UI 界面的逻辑梳理。</p>
+        </section>
+
+        <section class="page">
+            <span class="tag">03 / SOCIALS</span>
+            <h2>社交媒体</h2>
+            <div class="social-links">
+                <a href="#">Github →</a>
+                <a href="#">小红书 →</a>
+                <a href="#">即刻 →</a>
+                <a href="mailto:your@email.com">Email →</a>
+            </div>
+        </section>
+
+        <section class="page">
+            <span class="tag">04 / END</span>
+            <h2>保持联系</h2>
+            <p>感谢你的阅读。如果有任何有趣的合作想法，欢迎随时联系我。</p>
+            <p style="font-size: 0.8rem; margin-top: 40px;">© 2026 Changfan Li. All rights reserved.</p>
+        </section>
+    </div>
+
 </body>
 </html>

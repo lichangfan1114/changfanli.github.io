@@ -21,14 +21,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
         }
-        /* 每一页的样式 */
+
         .page {
             position: sticky;
-            top: 5vh; /* 每一页停留在距离顶部 5% 的位置 */
-            width: 85vw;
+            top: 5vh; 
+            width: 100%;
             max-width: 600px;
-            height: 80vh;
+            min-height: 80vh;
             background: var(--card-white);
             margin-bottom: 10vh;
             padding: 40px;
@@ -40,6 +44,7 @@
             justify-content: center;
             transition: transform 0.3s ease;
             border: 1px solid #eee;
+            overflow: hidden;
         }
         /* 封面页特殊样式 */
         .cover { background: #1a1a1a; color: white; }

@@ -5,47 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>李昌繁 | 个人作品集</title>
     <style>
+        :root {
+            --bg-color: #f0f0f0;
+            --card-white: #ffffff;
+            --text-main: #222;
+        }
         body {
             margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            font-family: -apple-system, sans-serif;
-            color: #ffffff;
-            overflow-x: hidden;
-            display: flex;
-            justify-content: center;
+            background-color: var(--bg-color);
+            font-family: "Inter", -apple-system, sans-serif;
+            color: var(--text-main);
         }
-
+        /* 页面容器 */
         .page-container {
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
             max-width: 500px;
             margin: 0 auto;
             position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .page {
-            position: relative;
-            width: 90%;
-            max-width: 450px;
+            position: sticky;
+            top: 5vh; 
+            width: 100%;
             min-height: 80vh;
-            margin: 40px auto;
+            background: var(--card-white);
+            margin-bottom: 10vh;
             padding: 40px;
-            background: #111;
-            border: 1px solid #333;
-            border-radius: 12px;
             box-sizing: border-box;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             display: flex;
             flex-direction: column;
             justify-content: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
-
-        .tag { font-size: 0.7rem; opacity: 0.5; letter-spacing: 2px; text-transform: uppercase; }
-        h1 { font-size: 3rem; margin: 15px 0; letter-spacing: -1px; }
-        p { line-height: 1.6; opacity: 0.8; font-size: 1.1rem; }
-    </style>
-    
         /* 封面页特殊样式 */
         .cover { background: #1a1a1a; color: white; }
         
